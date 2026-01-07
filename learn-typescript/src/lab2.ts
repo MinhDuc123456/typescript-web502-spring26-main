@@ -1,11 +1,11 @@
-// Enum đánh giá sản phẩm
+
 enum Rate {
     low = 'Thấp',
     medium = 'Trung bình',
     hight = 'Cao'
 }
 
-// Type Product
+
 type Product = {
     name: string;
     price: number;
@@ -13,7 +13,7 @@ type Product = {
     rate: Rate;
 };
 
-// Mảng sản phẩm
+
 let listProducts: Product[] = [
     { name: 'Sản phẩm A', price: 3, sale: true, rate: Rate.low },
     { name: 'Sản phẩm B', price: 6, sale: false, rate: Rate.medium },
@@ -41,12 +41,12 @@ const showProducts = (products: Product[]) => {
     });
 };
 
-// Hàm tính tổng giá bán sản phẩm (sử dụng reduce)
+
 const totalPrice = (products: Product[]): number => {
     return products.reduce((total, product) => total + product.price, 0);
 };
 
-// Hàm lọc sản phẩm đang Sale và đánh giá từ Trung bình trở lên (sử dụng filter)
+
 const filterSaleProducts = (products: Product[]) => {
     return products.filter(
         product =>
@@ -55,7 +55,7 @@ const filterSaleProducts = (products: Product[]) => {
     );
 };
 
-// Gọi hàm kiểm tra
+
 console.log('--- Danh sách sản phẩm ---');
 showProducts(listProducts);
 
